@@ -1,0 +1,171 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Temple Mudslide — Delivery Guide</title><style>:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f3f5f2;color:#20332e;font:17px/1.65 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:42px 52px;background:white}h1{font-size:44px;line-height:1.1;max-width:800px}h2{margin-top:48px;padding-top:20px;border-top:2px solid #c3d4c7}h3{margin-top:30px}a{color:#176950}code{background:#edf2ef;padding:2px 5px;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:15px;margin:24px 0}td,th{padding:12px 14px;text-align:left;border:1px solid #d9e2dc;vertical-align:top}th{background:#e8f0ea}td:first-child{min-width:130px}video{display:block;width:100%;max-height:470px;background:#111}nav{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}nav a{border:1px solid #8aac98;padding:7px 14px;border-radius:6px;text-decoration:none}.videos{display:grid;grid-template-columns:1fr 1fr;gap:24px}figcaption{font-size:14px;margin:9px 0}.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#47715e}.chapter{font:inherit;background:none;color:#176950;border:0;padding:0;cursor:pointer;text-decoration:underline}li{margin-bottom:12px}@media(max-width:700px){main{padding:24px 18px}h1{font-size:34px}.videos{grid-template-columns:1fr}table{font-size:13px}td,th{padding:8px}}@media print{body{background:white}main{padding:0}.videos,nav,.eyebrow{display:none}h2{break-after:avoid}tr{break-inside:avoid}}</style></head><body><main><p class="eyebrow">Temple Ruins / evidence & reproduction</p><nav><a href="FINAL_PROOF.html">Final Proof</a><a href="MANUAL_WALKTHROUGH.html">Manual Walkthrough</a><a href="Temple-Mudslide-Proof.zip">Proof archive</a><a href="Temple-Mudslide-Execution.zip">Execution archive</a><a href="GUIDE.md">Markdown guide</a></nav><section class="videos" aria-label="Recorded demonstration"><figure><video id="prep" controls preload="metadata" src="MudSlide-Part1-Prep.mp4"></video><figcaption>Part 1 · Preparation · 00:41 · Original audio</figcaption></figure><figure><video id="exec" controls preload="metadata" src="MudSlide-Part2-Exec.mp4"></video><figcaption>Part 2 · Execution · 02:42 · Original audio</figcaption></figure></section><article><h1>Temple Mudslide — delivery guide</h1>
+<p>This package documents a successful Temple Ruins mudslide demonstration in Tomb Raider III Remastered. Read this guide before the historical research chapters. The current route uses <strong>slot 1 / 3089 → save the upper pose in slot 4 → load slot 3 / 3095 → reload the new slot 4 save → finish in room 148</strong>.</p>
+<h2>What is included</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MudSlide-Part1-Prep.mp4</td>
+<td>Approximately 41 seconds: the local approach to the new slope and preparation of the slot 3 seed.</td>
+</tr>
+<tr>
+<td>MudSlide-Part2-Exec.mp4</td>
+<td>Approximately 2 minutes 42 seconds: the automated climb, upper save, slope-seed load and successful crossing.</td>
+</tr>
+<tr>
+<td>Temple-Mudslide-Proof.zip</td>
+<td>Complete sanitized proof collection: final chapters, historical research notes, textual measurements and journals, figures, cited screenshots, research scripts and classic source references. Includes FINAL_PROOF.html and the manual walkthrough.</td>
+</tr>
+<tr>
+<td>FINAL_PROOF.html</td>
+<td>One large offline proof page with chapter anchors, directly embedded figures and all 20 buffer-gallery images.</td>
+</tr>
+<tr>
+<td>Temple-Mudslide-Execution.zip</td>
+<td>Portable CE table and Lua bridge, Python replay and its dependencies, setup helper, menu recognition fixtures and execution instructions.</td>
+</tr>
+<tr>
+<td>START_HERE.html / GUIDE.md</td>
+<td>This explanation and tutorial, in browser-readable and plain Markdown forms.</td>
+</tr>
+<tr>
+<td>MANUAL_WALKTHROUGH.html / MANUAL_WALKTHROUGH.md</td>
+<td>Separate hands-on walkthrough: head-nod counting, menu buffers, the height drop after the first 15 buffers, passport saving and the slope-load finish.</td>
+</tr>
+<tr>
+<td>SHA256SUMS.txt</td>
+<td>Integrity hashes of the delivered files.</td>
+</tr>
+</tbody></table>
+<p>The final chapters retain historical comparisons and claims. Earlier chapters refer to seed 3068 or 3088, older upper saves, an uncompleted input-only approach, or an unverified video. Those are historical statements, superseded for the current demonstration by the current-result section of <a href="FINAL_PROOF.html">FINAL_PROOF.html</a> and this guide. Some early experiments explicitly used position writes; they are not evidence of an input-only route. The current recorded replay uses game input with read-only telemetry to choose pauses. The full proof ZIP includes the sanitized supporting journals, scripts, historical research archive and classic source reference tree.</p>
+<h2>Current result and its limits</h2>
+<p>The final successful source journal is <code>tomb-raider-analysis/temple-mudslide/data/manual/manual-1790121761988164400.json</code> inside the proof archive. It reports approximately 155.87 seconds of automation, upper save <strong>3097</strong>, final <strong>room 148</strong>, and preservation of the protected saves. The execution video is longer because it includes menu and end holds. Video timestamps below refer to the delivered media, not to journal wall-clock time.</p>
+<p>The new seed is in <strong>room 35</strong>. It begins on sector <strong>7/15</strong> and slides into <strong>8/15</strong>; both measured sectors have X/Z tilt <strong>−3/0</strong>. Sector 8/15 is the slope identified during preparation. The script waits until the character is sliding in the measured range before loading the upper save. Room numbers and sector coordinates follow the analysis/trview convention.</p>
+<p>Part 1 shows a local ledge climb and approach to this slope. It does not show a complete route from level spawn, and it has no input overlay. Therefore the recording alone cannot certify every key press or a complete no-jump run. The old seed <strong>3088</strong> was made using a jump and is retained only as a protected historical save; it is not loaded by the current replay. The new seed <strong>3095</strong> is the player&#39;s replacement after the no-jump requirement was raised.</p>
+<p>The explanation based on cached collision tilt is supported by the measurements and comparison with classic engine source. It is an implementation hypothesis for Remastered, not a claim that its proprietary source has been inspected. The demonstrated outcome and the inferred cause are separate claims.</p>
+<h2>Video 1 — preparation, approximately 00:41</h2>
+<p>Times are approximate and rounded to the nearest useful action boundary.</p>
+<table>
+<thead>
+<tr>
+<th>Video time</th>
+<th>What happens / why it matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00:00–00:07</td>
+<td>Lara approaches the low stone ledge, catches its edge and pulls up. This is the local access sequence shown in the recording.</td>
+</tr>
+<tr>
+<td>00:07–00:18</td>
+<td>She turns on the ledge, moves onto/across the slope and aligns downhill.</td>
+</tr>
+<tr>
+<td>00:18–00:24</td>
+<td>Positioning settles, followed by the beginning of the slide.</td>
+</tr>
+<tr>
+<td>00:25–00:33</td>
+<td>Inventory/passport and the save list open; physical slot 3 is selected. The list initially shows the older counter in that slot.</td>
+</tr>
+<tr>
+<td>00:34–00:36</td>
+<td>Saving is confirmed and the menu closes. The resulting seed is 3095, visible in Part 2 and corroborated by the save inventory/journal.</td>
+</tr>
+<tr>
+<td>00:36–00:41</td>
+<td>Lara continues the slide, runs out and stops. This is after the seed was saved.</td>
+</tr>
+</tbody></table>
+<h2>Video 2 — execution, approximately 02:42</h2>
+<table>
+<thead>
+<tr>
+<th>Video time</th>
+<th>What happens / why it matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00:00–00:04</td>
+<td>The load list selects the starting save 3089 from physical slot 1.</td>
+</tr>
+<tr>
+<td>00:04–00:14</td>
+<td>The replay approaches the lower slope and corrects the facing direction.</td>
+</tr>
+<tr>
+<td>00:14–00:24</td>
+<td>One flare is drawn; crouching and the initial flare sequence establish the climb setup, then Lara slides back.</td>
+</tr>
+<tr>
+<td>00:24–00:28</td>
+<td>A short walk returns to the lower alignment point; inventory opens.</td>
+</tr>
+<tr>
+<td>00:28–00:43</td>
+<td>Eight lower menu buffers establish the calibrated angle: four left, two idle, one left, one idle.</td>
+</tr>
+<tr>
+<td>00:43–01:22</td>
+<td>The main crouch/flare climb proceeds. The bridge observes the live state to stop at the upper pause.</td>
+</tr>
+<tr>
+<td>01:22–01:57</td>
+<td>Nineteen upper crouch/menu buffers advance from animation frame 8693 to the required crouch frame 6675.</td>
+</tr>
+<tr>
+<td>01:57–02:10</td>
+<td>Passport navigation opens the save page while preserving the upper pose. Physical slot 4 is selected and becomes save 3097.</td>
+</tr>
+<tr>
+<td>02:11–02:18</td>
+<td>The load list selects slot 3 / 3095, placing Lara on the replacement room 35 slope.</td>
+</tr>
+<tr>
+<td>02:18–02:27</td>
+<td>While sliding on the seed slope, the replay opens the load list and reloads slot 4 / 3097.</td>
+</tr>
+<tr>
+<td>02:27–02:31</td>
+<td>The upper save resumes with the observed sideways crossing and settling motion.</td>
+</tr>
+<tr>
+<td>02:31–02:33</td>
+<td>A short forward walk reaches the final position, identified as room 148 by telemetry.</td>
+</tr>
+<tr>
+<td>02:33–02:42</td>
+<td>Inventory remains open at the successful endpoint.</td>
+</tr>
+</tbody></table>
+<h2>Manual play</h2>
+<p>Read the separate <a href="MANUAL_WALKTHROUGH.html">Temple Mudslide — Manual Walkthrough</a> for the player&#39;s step-by-step inputs and visual cues, including counting Lara&#39;s head nods and stopping at the height drop on the buffer after the first 15. A <a href="MANUAL_WALKTHROUGH.md">Markdown copy</a> is also included. The automatic video starts its upper buffers from an earlier pause and therefore takes 19 instead of the manual example&#39;s 16.</p>
+<h2>Execution tutorial</h2>
+<h3>Prerequisites</h3>
+<p>Use Windows, Tomb Raider III Remastered, Cheat Engine with Lua support (the original environment used CE 7.5), Python 3.10 or newer, and <code>ffmpeg</code> available on PATH. The executable must be <code>tomb123.exe</code> with the matching <code>tomb3.dll</code> layout. The supplied pointer expression is <code>[&quot;tomb3.dll&quot;+3D4D30]+58</code>; it is build-specific and must be revalidated after game updates. The package does not include the game, level binaries, Cheat Engine, Python, FFmpeg or a personal save bank.</p>
+<p>The active save bank must contain <strong>3089 in slot 1</strong>, <strong>3088 preserved</strong>, and the exact calibrated <strong>3095 in slot 3</strong>. Slot 4 will be overwritten with the upper checkpoint. The script is a replay of these specific saves, not a general route generator for arbitrary saves. A recipient who does not have the matching saves can review all evidence but cannot immediately run this calibrated replay. Obtain the required saves separately or perform and validate a new calibration; renaming a counter is insufficient.</p>
+<p>Use tank controls, normal 60 FPS, and the following mapping: arrows for movement, <strong>G</strong> walk, <strong>Y</strong> crouch, <strong>E</strong> action, <strong>Space</strong> draw/holster, <strong>comma</strong> flare, <strong>Esc</strong> inventory, <strong>F5/F9</strong> save/load. In particular, use E for Action, even where historical notes mention Ctrl.</p>
+<p>The menu recognizer is calibrated for a <strong>1646 × 1089 outer game-window screenshot</strong>, with the original German menu layout, font and scale. The delivered videos are 1630 × 1082 and are not the OCR reference size. Keep the window fully visible and unobscured. A different language, scale, resolution or layout requires recalibration; the recognizer should reject unfamiliar screens.</p>
+<h3>Set up and play</h3>
+<ol>
+<li>Extract <code>Temple-Mudslide-Execution.zip</code> to a writable folder. Keep its directory structure. Back up your active save bank before a run.</li>
+<li>Open a terminal in the extracted <code>Temple-Mudslide-Execution</code> folder and run <code>python setup.py</code>. Select your active <code>savegame.dat</code>. Setup checks the required counters/seed and FFmpeg, then writes local configuration and runtime locator files. No save data is changed by setup.</li>
+<li>Start the game, load into Temple Ruins, and attach Cheat Engine to <code>tomb123.exe</code>. Open <code>MudSlide-Bridge.ct</code>. Allow its Lua loader and select <code>START_BRIDGE.lua</code> from this package in the file picker. This loads the Lua file with its filename available, allowing it to locate the other package files. Keep CE open, and leave every value-freeze checkbox clear.</li>
+<li>Start from normal gameplay and run <code>python run_replay.py</code>. You have five seconds to focus the game. If the inventory ring is already open, use <code>python run_replay.py --from-inventory</code> instead. That option is not for an open passport or F9 list.</li>
+<li>Let the replay finish without pressing game keys or moving another window over the game. It loads slot 1, climbs, saves to slot 4, loads slot 3 and returns to the new slot 4 checkpoint. The final inventory pause in room 148 marks completion.</li>
+<li>Inspect the newly generated journal under <code>data/manual/</code>. Require <code>completed: true</code>, the room 148 endpoint and protected-record preservation. A video that merely looks close to the endpoint is not the automated success check.</li>
+</ol>
+<p>To stop, run <code>python stop.py</code>; losing game focus also causes the bridge to reject/pause input. Check the actual game state before restarting. After a stop, reload <code>START_BRIDGE.lua</code>. Do not blindly retry a failed save or load. If recording, start and stop the recorder yourself; the replay does not control recording software.</p>
+<p>The execution distribution replaces personal paths with runtime configuration and adds a focus countdown. Diagnostic position/flare memory setters are disabled in the shipped execution bridge. Use its documented playback entry point. The portable package has been checked offline; it has not been demonstrated on a different recipient&#39;s machine.</p>
+<h2>How the proof is organized</h2>
+<p>Open <a href="FINAL_PROOF.html">FINAL_PROOF.html</a> for the complete anchored page, with twelve chapters and 36 embedded images. The full proof ZIP restores the research directory layout: final publication chapters under <code>tomb-raider-analysis/temple-mudslide/docs/final/</code>, historical notes under <code>archive/</code>, textual measurements and journals under <code>data/</code>, research scripts under <code>scripts/</code>, selected screenshots under <code>media/screenshots/</code>, and classic source references under <code>tomb3/</code>. FINAL_PROOF.html and the manual walkthrough are also at the archive root. The HTML remains a self-contained offline reading edition; consult the full ZIP for supporting records. Some archived notes retain their original German.</p>
+<p>The measured upper checkpoint is X <strong>54234/54235</strong>, Y <strong>3355</strong>, yaw <strong>14629</strong>, room <strong>136</strong>, state <strong>71</strong>, animation <strong>222</strong>, frame <strong>6675</strong>. The new seed begins at X <strong>74328</strong>, Y <strong>−2110</strong>, Z <strong>58765</strong>, yaw <strong>16384</strong> in room 35. The replay loads the upper save while the seed is sliding at X <strong>74600–75450</strong>, state <strong>24</strong>, animation <strong>70</strong>. The proposed cached-tilt mechanism selects the +X slide direction; the observed crossing is approximately 500 units before the final forward walk to room 148.</p>
+<h2>Privacy, provenance and redistribution</h2>
+<p>Delivered text and structured records have local absolute paths, the known account/machine names and account identifier removed or replaced. Part 1 is stream-copied; Part 2 is re-encoded as H.264 below 100 MB at its original resolution and frame rate. Both retain their original audio streams, with original container metadata removed; <strong>original audio is retained as requested</strong>. Audio content is not anonymized or certified free of identifying speech. The video review used sampled frames, so it is not a frame-by-frame privacy certification.</p>
+<p>Raw save banks, runtime files, user configuration, Git history and unrelated captures are excluded. The proof ZIP includes sanitized textual measurements, historical journals, research scripts and classic source references, together with the final publication and cited screenshots. Uncited raw captures and earlier large recordings are excluded. Private local configuration, screenshots, logs and save backups generated by future executions must be reviewed separately before sharing again.</p>
+<p>Sanitization changes file bytes. Archive manifests hash the delivered copies; old hashes embedded in historical reports describe their original evidence and are not hashes of the sanitized copies. Classic source references describe the analysis model, not the Remastered source. Their accompanying license is included under <code>tomb3/LICENSE.md</code>.</p>
+</article></main><script>let current=null;for(const n of document.querySelector('article').children){if(n.tagName==='H2') current=n.textContent.startsWith('Video 1')?'prep':n.textContent.startsWith('Video 2')?'exec':null;if(n.tagName==='TABLE'&&current){const id=current;for(const tr of n.querySelectorAll('tbody tr')){const c=tr.cells[0],m=c.textContent.match(/(\d+):(\d+)/);if(m){const b=document.createElement('button');b.className='chapter';b.textContent=c.textContent;b.title='Seek to this chapter';b.onclick=()=>{const v=document.getElementById(id);v.currentTime=Number(m[1])*60+Number(m[2]);v.scrollIntoView({behavior:'smooth',block:'center'});};c.replaceChildren(b);}}}}</script></body></html>

@@ -1,0 +1,95 @@
+{
+  "video_streams": {
+    "MudSlide-Part1-Prep.mp4": {
+      "original_video_and_audio_hashes_match": true,
+      "duration": "41.216000",
+      "metadata_tags": [
+        {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.15.100"
+        },
+        {
+          "language": "und",
+          "handler_name": "VideoHandler"
+        },
+        {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      ]
+    },
+    "MudSlide-Part2-Exec.mp4": {
+      "original_video_and_audio_hashes_match": false,
+      "duration": "161.898667",
+      "metadata_tags": [
+        {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.15.100"
+        },
+        {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.32.100 libx264"
+        },
+        {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      ],
+      "original_audio_hash_matches": true,
+      "video_reencoded": true,
+      "compression": {
+        "codec": "H.264",
+        "mode": "two-pass",
+        "video_bitrate_kbps": 4300,
+        "preset": "slow",
+        "original_bytes": 126307683,
+        "delivered_bytes": 90645732,
+        "resolution_and_frame_count_unchanged": true,
+        "nominal_fps": 30,
+        "video_timestamps_normalized_to_constant_fps": true,
+        "decode_check": "passed"
+      }
+    }
+  },
+  "archives": {
+    "Temple-Mudslide-Execution.zip": {
+      "files": 35,
+      "manifest_hashes_verified": 34,
+      "bytes": 8402454
+    },
+    "Temple-Mudslide-Proof.zip": {
+      "files": 896,
+      "manifest_hashes_verified": 895,
+      "bytes": 102520150
+    }
+  },
+  "menu_regression_tests": 5,
+  "python_syntax": "passed",
+  "lua_syntax": "passed",
+  "html_chapter_links": 19,
+  "live_portable_replay": "not performed",
+  "manual_walkthrough": {
+    "separate_html_and_markdown": true,
+    "linked_from_start_page": true,
+    "embedded_comparison_images": 2,
+    "manual_height_drop": "after first 15 buffers, on buffer 16 from the documented human pause",
+    "archives": "walkthrough delivered separately"
+  },
+  "final_proof": {
+    "images": 36,
+    "brokenImages": 0,
+    "brokenAnchors": [],
+    "duplicateIds": [],
+    "overflow": false,
+    "chapters": 12,
+    "excludedSupportingLinks": 53,
+    "standalone": true,
+    "zip_scope": "Full sanitized proof collection with standalone FINAL_PROOF.html and manual walkthrough at archive root"
+  },
+  "ct_xml": "11 records, nine dynamic pointer fields; parsed successfully"
+}
