@@ -8,9 +8,9 @@ This package documents a successful Temple Ruins mudslide demonstration in Tomb 
 | --- | --- |
 | MudSlide-Part1-Prep.mp4 | Approximately 41 seconds: the local approach to the new slope and preparation of the slot 3 seed. |
 | MudSlide-Part2-Exec.mp4 | Approximately 2 minutes 42 seconds: the automated climb, upper save, slope-seed load and successful crossing. |
-| Temple-Mudslide-Proof.zip | Complete sanitized proof collection: final chapters, historical research notes, textual measurements and journals, figures, cited screenshots, research scripts and classic source references. Includes FINAL_PROOF.html and the manual walkthrough. |
+| Temple-Mudslide-Proof.7z | Complete sanitized proof collection: final chapters, historical research notes, textual measurements and journals, figures, cited screenshots, research scripts and classic source references. Includes FINAL_PROOF.html and the manual walkthrough. |
 | FINAL_PROOF.html | One large offline proof page with chapter anchors, directly embedded figures and all 20 buffer-gallery images. |
-| Temple-Mudslide-Execution.zip | Portable CE table and Lua bridge, Python replay and its dependencies, setup helper, menu recognition fixtures and execution instructions. |
+| Temple-Mudslide-Execution.7z | Portable CE table and Lua bridge, Python replay and its dependencies, setup helper, menu recognition fixtures and execution instructions. |
 | START_HERE.html / GUIDE.md | This explanation and tutorial, in browser-readable and plain Markdown forms. |
 | MANUAL_WALKTHROUGH.html / MANUAL_WALKTHROUGH.md | Separate hands-on walkthrough: head-nod counting, menu buffers, the height drop after the first 15 buffers, passport saving and the slope-load finish. |
 | SHA256SUMS.txt | Integrity hashes of the delivered files. |
@@ -76,7 +76,7 @@ The menu recognizer is calibrated for a **1646 × 1089 outer game-window screens
 
 ### Set up and play
 
-1. Extract `Temple-Mudslide-Execution.zip` to a writable folder. Keep its directory structure. Back up your active save bank before a run.
+1. Extract `Temple-Mudslide-Execution.7z` to a writable folder. Keep its directory structure. Back up your active save bank before a run.
 2. Open a terminal in the extracted `Temple-Mudslide-Execution` folder and run `python setup.py`. Select your active `savegame.dat`. Setup checks the required counters/seed and FFmpeg, then writes local configuration and runtime locator files. No save data is changed by setup.
 3. Start the game, load into Temple Ruins, and attach Cheat Engine to `tomb123.exe`. Open `MudSlide-Bridge.ct`. Allow its Lua loader and select `START_BRIDGE.lua` from this package in the file picker. This loads the Lua file with its filename available, allowing it to locate the other package files. Keep CE open, and leave every value-freeze checkbox clear.
 4. Start from normal gameplay and run `python run_replay.py`. You have five seconds to focus the game. If the inventory ring is already open, use `python run_replay.py --from-inventory` instead. That option is not for an open passport or F9 list.
